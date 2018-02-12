@@ -1,5 +1,7 @@
 {{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
+{{#if session.isAuthenticated}}
+    <button {{action 'createRental'}}>Create new rental</button>
+{{/if}}
 {{!-- Feel free to remove this! --}}
 
 {{outlet}}
